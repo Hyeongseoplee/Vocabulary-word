@@ -1,26 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch"; 
 
 function Daylist() {
-    const [ days, setDays ] = useState([]);
-
-function chageDays() {
-    setDays([
-        ...days,
-        {
-            id : Math.random(),
-            day : 1,
-        }
-    ])
-}
-
-    useEffect(() => {
-        fetch('http://localhost:3001/days')
-        .then(res => res.json())
-        .then(data => {
-            setDays(data);
-        })
-    }, [])
+    const days = useFetch('http://localhost:3001/days');
 
     return (
         <>
@@ -33,7 +15,6 @@ function chageDays() {
                     ) 
                 })}
             </ul>
-            <button onClick={ chageDays }>Chage Day</button>
         </>
     )
 }
