@@ -11,8 +11,6 @@ function Word({word}) {
         setDone(!isdone);
     }
     
-    console.log(isdone);
-
     return(
         <tr className={isdone ? "off" : ""}>
             <td>
