@@ -1,6 +1,7 @@
 import React from 'react';
 import dummy from '../db/data.json';
 import { useParams } from 'react-router-dom';
+import Word from './Word';
 
 function Words() {
     const words  = dummy.words;
@@ -13,12 +14,9 @@ function Words() {
         <h2>Day {day}</h2>
         <table>
             <tbody>
-                {wordsList.map((word, key) => {
+                {wordsList.map((word) => {
                     return (
-                        <tr key={word.id}>
-                            <td>{word.eng}</td>
-                            <td>{word.kor}</td>
-                        </tr>
+                            <Word key={word.id} word={word}/>
                     )
                 })}
             </tbody>
