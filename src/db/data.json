@@ -1,0 +1,51 @@
+{
+    "days" : [
+        { "day" : 1, "id" : 1},
+        { "day" : 2, "id" : 2},
+        { "day" : 3, "id" : 3}
+    ],
+    "words" : [
+        {
+            "id" : 1,
+            "day" : 1,
+            "eng" : "book",
+            "kor" : "책",
+            "isdone" : false
+        }, 
+        {
+            "id" : 2,
+            "day" : 1,
+            "eng" : "south",
+            "kor" : "남",
+            "isdone" : false
+        }, 
+        {
+            "id" : 3,
+            "day" : 2,
+            "eng" : "male",
+            "kor" : "남성",
+            "isdone" : false
+        }, 
+        {
+            "id" : 4,
+            "day" : 2,
+            "eng" : "female",
+            "kor" : "여성",
+            "isdone" : false
+        }, 
+        {
+            "id" : 5,
+            "day" : 3,
+            "eng" : "elephant",
+            "kor" : "코끼리",
+            "isdone" : false
+        }, 
+        {
+            "id" : 6,
+            "day" : 3,
+            "eng" : "paper",
+            "kor" : "종이",
+            "isdone" : false
+        }
+    ]
+}
