@@ -13,7 +13,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start" : "react-scripts start",
+    "server-start": "json-server --watch db.json",
     "build": "react-scripts build"
   },
   "eslintConfig": {

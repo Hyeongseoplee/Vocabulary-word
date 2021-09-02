@@ -2,7 +2,7 @@ import React,  { useState } from 'react';
 
 function Word({word}) {
     const [ isShown, setShown] = useState(false);
-    const [ isdone, setDone ] = useState(false);
+    const [ isdone, setDone ] = useState(word.isdone);
 
     function toggleShown() {
         setShown(!isShown);
