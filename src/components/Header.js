@@ -9,7 +9,9 @@ function Header() {
             </h1>
 
             <div className="header__menu">
-                <button>단어추가</button>
+                <button>
+                    <Link to='create_word'>단어추가</Link>
+                </button>
                 <button>Day 추가</button>
             </div>
         </header>

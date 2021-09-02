@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch"; 
 
 function Daylist() {
-    const days = useFetch('http://localhost:3004/days');
-    console.log(days);
+    const days = useFetch('http://localhost:3000/days');
     return (
         <>
             <ul className="days">
