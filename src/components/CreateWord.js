@@ -1,24 +1,26 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useHistory } from "react-router";
 import useFetch from "../hooks/useFetch"; 
 
 export default function CreateWord() {
-    const days = useFetch('http://localhost:3000/days');
+    const days = useFetch('http://localhost:3001/days');
     const history = useHistory();
+    const [ isLoading, setLoading ] = useState(false);
 
     function onSubmit(e) {
         e.preventDefault();
 
-        fetch(`http://localhost:3000/words`, {
+        if( isLoading === true){
+            fetch(`http://localhost:3001/words`, {
         method : "POST",
         headers : {
             "Content-type" : "application/json"
         },
         body : JSON.stringify({
+            day : Number(dayRef.current.value),
             eng : engRef.current.value,
             kor : korRef.current.value, 
-            day : dayRef.current.value,
-            isDone : false
+            isDone : false,
         })
         }).then( res => {
             if(res.ok) {
@@ -26,11 +28,13 @@ export default function CreateWord() {
                 history.push(`/words/${dayRef.current.value}`)
             }
         })
+        }
     }
 
     const engRef = useRef(null);
     const korRef = useRef(null);
     const dayRef = useRef(null);
+
 
     return (
             <form onSubmit={onSubmit}>
@@ -46,6 +50,7 @@ export default function CreateWord() {
                     <label>Day</label>
                     <select ref={dayRef}>
                         {days.map((day) => {
+                            
                             return <option key={day.id}>{day.day}</option>
                         })}
                     </select>

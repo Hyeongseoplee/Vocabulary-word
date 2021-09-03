@@ -1,51 +1,71 @@
 {
-    "days" : [
-        { "day" : 1, "id" : 1},
-        { "day" : 2, "id" : 2},
-        { "day" : 3, "id" : 3}
-    ],
-    "words" : [
-        {
-            "id" : 1,
-            "day" : 1,
-            "eng" : "book",
-            "kor" : "책",
-            "isDone" : false
-        }, 
-        {
-            "id" : 2,
-            "day" : 1,
-            "eng" : "south",
-            "kor" : "남",
-            "isDone" : false
-        }, 
-        {
-            "id" : 3,
-            "day" : 2,
-            "eng" : "male",
-            "kor" : "남성",
-            "isDone" : false
-        }, 
-        {
-            "id" : 4,
-            "day" : 2,
-            "eng" : "female",
-            "kor" : "여성",
-            "isDone" : false
-        }, 
-        {
-            "id" : 5,
-            "day" : 3,
-            "eng" : "elephant",
-            "kor" : "코끼리",
-            "isDone" : false
-        }, 
-        {
-            "id" : 6,
-            "day" : 3,
-            "eng" : "paper",
-            "kor" : "종이",
-            "isDone" : false
-        }
-    ]
+  "days": [
+    {
+      "day": 1,
+      "id": 1
+    },
+    {
+      "day": 2,
+      "id": 2
+    },
+    {
+      "day": 3,
+      "id": 3
+    },
+    {
+      "day": 4,
+      "id": 4
+    }
+  ],
+  "words": [
+    {
+      "id": 1,
+      "day": 1,
+      "eng": "book",
+      "kor": "책",
+      "isDone": false
+    },
+    {
+      "id": 2,
+      "day": 1,
+      "eng": "south",
+      "kor": "남",
+      "isDone": false
+    },
+    {
+      "id": 3,
+      "day": 2,
+      "eng": "male",
+      "kor": "남성",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "day": 2,
+      "eng": "female",
+      "kor": "여성",
+      "isDone": false
+    },
+    {
+      "id": 5,
+      "day": 3,
+      "eng": "elephant",
+      "kor": "코끼리",
+      "isDone": false
+    },
+    {
+      "id": 6,
+      "day": 3,
+      "eng": "paper",
+      "kor": "종이",
+      "isDone": false
+    },
+    {
+      "eng": "water",
+      "kor": "물",
+      "day": 1,
+      "isDone": false,
+      "id": 7
+    }
+  ]
 }

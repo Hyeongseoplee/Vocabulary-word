@@ -10,7 +10,7 @@ function Word({word : w}) {
     }
 
     function toggleDim (){
-        fetch(`http://localhost:3000/words/${word.id}`, {
+        fetch(`http://localhost:3001/words/${word.id}`, {
             method : "PUT",
             headers : {
                 "Content-type" : "application/json"
@@ -27,8 +27,8 @@ function Word({word : w}) {
             })};
     
             function del() {
-                if(window.confirm("You want to delete this?")){
-                    fetch(`http://localhost:3000/words/${word.id}`,{
+                if(window.confirm("Do you want to delete this?")){
+                    fetch(`http://localhost:3001/words/${word.id}`,{
                         method : "DELETE"
                     }).then( 
                         res => {
@@ -39,7 +39,7 @@ function Word({word : w}) {
                 }
             }
 
-            if  (word.id === 0) {
+            if(word.id === 0) {
                 return null
             }
 

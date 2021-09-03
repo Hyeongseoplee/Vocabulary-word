@@ -6,7 +6,7 @@ import Word from './Word';
 function Words() {
     const { day } = useParams();
 
-    const words = useFetch(`http://localhost:3000/words?day=${day}`);
+    const words = useFetch(`http://localhost:3001/words?day=${day}`);
 
     return(
         <>
@@ -14,6 +14,7 @@ function Words() {
         <table>
             <tbody>
                 {words.map((word) => {
+
                     return (
                             <Word key={word.id} word={word}/>
                     )

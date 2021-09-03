@@ -12,7 +12,9 @@ function Header() {
                 <button>
                     <Link to='create_word'>단어추가</Link>
                 </button>
-                <button>Day 추가</button>
+                <button>
+                    <Link to='create_day'>Day 추가</Link>
+                </button>
             </div>
         </header>
     )
