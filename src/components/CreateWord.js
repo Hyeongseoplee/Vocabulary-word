@@ -10,26 +10,29 @@ export default function CreateWord() {
     function onSubmit(e) {
         e.preventDefault();
 
-        if( isLoading === true){
-            fetch(`http://localhost:3001/words`, {
-        method : "POST",
-        headers : {
-            "Content-type" : "application/json"
-        },
-        body : JSON.stringify({
-            day : Number(dayRef.current.value),
-            eng : engRef.current.value,
-            kor : korRef.current.value, 
-            isDone : false,
-        })
-        }).then( res => {
-            if(res.ok) {
-                alert(`success to make new word!`)
-                history.push(`/words/${dayRef.current.value}`)
+        if(!isLoading){ // isLoading이 false일 때
+            setLoading(true);
+        fetch(`http://localhost:3001/words`, {
+            method : "POST",
+            headers : {
+                "Content-type" : "application/json"
+            },
+            body : JSON.stringify({
+                day : Number(dayRef.current.value),
+                eng : engRef.current.value,
+                kor : korRef.current.value, 
+                isDone : false,
+            })
+            })
+            .then( res => {
+                if(res.ok) {
+                    alert(`success to make new word!`);
+                    history.push(`/words/${dayRef.current.value}`);
+                    setLoading(false);
+                }
+            })
             }
-        })
         }
-    }
 
     const engRef = useRef(null);
     const korRef = useRef(null);
@@ -55,7 +58,9 @@ export default function CreateWord() {
                         })}
                     </select>
                 </div>
-                <button>저장</button>
+                <button style={{ opacity : isLoading ? 0.5 : 1}}>
+                    { isLoading === true ? "loading.." : "저장"}
+                    </button>
             </form>
         )
 }
